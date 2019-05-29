@@ -2,6 +2,7 @@
 package pokimonapp;
 
 import interfaz.jfBienvenido;
+import entidades.*;
 
 public class PokimonApp {
 

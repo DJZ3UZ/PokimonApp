@@ -16,6 +16,7 @@ public class jfBatalla1 extends javax.swing.JFrame {
      */
     public jfBatalla1() {
         initComponents();
+        this.setLocationRelativeTo(this);
         
     }
 
@@ -40,7 +41,7 @@ public class jfBatalla1 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setText("¡Hora de pelear!d");
+        jLabel1.setText("¡Hora de pelear!");
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Bulbasaur.png"))); // NOI18N
 

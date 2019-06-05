@@ -6,15 +6,24 @@ import javax.swing.JOptionPane;
 
 
 public class jfBienvenido extends javax.swing.JFrame {
+    public String nombre;
+    public jfBienvenido menu;
+    public jfBienvenido(jfBienvenido menu) {
+        initComponents();
+        this.menu = menu;
+        jTextField1.setText(menu.nombre);
+    }
+    
     
 
     
-    public jfBienvenido() {
-        
+    public jfBienvenido() {       
         
         initComponents();
         this.setLocationRelativeTo(this);
     }
+    
+    
 
   
     @SuppressWarnings("unchecked")
@@ -90,13 +99,15 @@ public class jfBienvenido extends javax.swing.JFrame {
         String n = jTextField1.getText();
         String s = jTextField2.getText();
         
+        nombre =n;
+        
         if (s.equals("Masculino")||s.equals("masculino")||s.equals("M")||s.equals("m")){
-            jfEleccionMasculino marco = new jfEleccionMasculino();
+            jfEleccionMasculino marco = new jfEleccionMasculino(this);
             marco.setVisible(true);
         }
         
         else if (s.equals("Femenino")||s.equals("femenino")||s.equals("f")||s.equals("F")){
-            jfEleccionFemenino marco = new jfEleccionFemenino();
+            jfEleccionFemenino marco = new jfEleccionFemenino(this);
             marco.setVisible(true);
         }
         else{

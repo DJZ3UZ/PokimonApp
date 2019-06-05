@@ -11,13 +11,17 @@ package interfaz;
  */
 public class jfEleccionMasculino extends javax.swing.JFrame {
 
-    /**
-     * Creates new form jfEleccion
-     */
+    public jfBienvenido menu;
+    
     public jfEleccionMasculino() {
         initComponents();
         this.setLocationRelativeTo(this);
         
+    }
+    public jfEleccionMasculino(jfBienvenido menu) {
+        initComponents();
+        this.menu = menu;        
+        jLabel6.setText(menu.nombre);        
     }
 
     /**
@@ -37,6 +41,9 @@ public class jfEleccionMasculino extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -76,18 +83,16 @@ public class jfEleccionMasculino extends javax.swing.JFrame {
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/AshKetchum.gif"))); // NOI18N
 
+        jLabel6.setText("jLabel6");
+
+        jLabel7.setText("Bienvenido");
+
+        jLabel8.setText("¡Es hora de elegir tu Pokimon!");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(98, 98, 98)
-                .addComponent(jButton1)
-                .addGap(132, 132, 132)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3)
-                .addGap(70, 70, 70))
             .addGroup(layout.createSequentialGroup()
                 .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -97,11 +102,25 @@ public class jfEleccionMasculino extends javax.swing.JFrame {
                             .addComponent(jLabel5)
                             .addComponent(jLabel2))
                         .addGap(48, 48, 48)
-                        .addComponent(jLabel3)
-                        .addGap(10, 10, 10)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel6))
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel8))
+                        .addGap(17, 17, 17)))
                 .addGap(59, 59, 59)
                 .addComponent(jLabel4)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(98, 98, 98)
+                .addComponent(jButton1)
+                .addGap(132, 132, 132)
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton3)
+                .addGap(70, 70, 70))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,9 +142,19 @@ public class jfEleccionMasculino extends javax.swing.JFrame {
                         .addComponent(jButton2)
                         .addComponent(jButton3))
                     .addComponent(jButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
-                .addComponent(jLabel5)
-                .addGap(34, 34, 34))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                        .addComponent(jLabel5)
+                        .addGap(34, 34, 34))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(84, 84, 84)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel6))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel8)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         pack();
@@ -191,5 +220,8 @@ public class jfEleccionMasculino extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     // End of variables declaration//GEN-END:variables
 }

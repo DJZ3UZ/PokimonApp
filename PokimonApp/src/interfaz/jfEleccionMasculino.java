@@ -21,7 +21,7 @@ public class jfEleccionMasculino extends javax.swing.JFrame {
     public jfEleccionMasculino(jfBienvenido menu) {
         initComponents();
         this.menu = menu;        
-        jLabel6.setText(menu.nombre);        
+        jLabel6.setText(menu.nombre);       
     }
 
     /**

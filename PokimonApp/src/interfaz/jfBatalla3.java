@@ -1,8 +1,14 @@
 
 package interfaz;
 
+import entidades.Pokimon;
+
 
 public class jfBatalla3 extends javax.swing.JFrame {
+    Pokimon miPokemon= new Pokimon("Squirtle");
+    Pokimon Pokemonrival= new Pokimon("Bulbasaur");
+    
+  
 
     /**
      * Creates new form jfBatalla3
@@ -10,6 +16,9 @@ public class jfBatalla3 extends javax.swing.JFrame {
     public jfBatalla3() {
         initComponents();
         this.setLocationRelativeTo(this);
+        jLabel4.setText(miPokemon.MostrarEstado());
+        jLabel5.setText(Pokemonrival.MostrarEstado());
+        
     }
 
    
@@ -25,6 +34,8 @@ public class jfBatalla3 extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,14 +56,14 @@ public class jfBatalla3 extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Bulbasaur.png"))); // NOI18N
 
+        jLabel4.setText("jLabel4");
+
+        jLabel5.setText("jLabel5");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(212, 212, 212)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(106, 106, 106)
                 .addComponent(jButton1)
@@ -72,6 +83,16 @@ public class jfBatalla3 extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(54, 54, 54))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(212, 212, 212)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(134, 134, 134)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addGap(144, 144, 144))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -82,10 +103,13 @@ public class jfBatalla3 extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(27, 27, 27))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel5))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addGap(39, 39, 39)))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel4)))
+                .addGap(7, 7, 7)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -140,6 +164,8 @@ public class jfBatalla3 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables

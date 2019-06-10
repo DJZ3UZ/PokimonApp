@@ -5,11 +5,21 @@
  */
 package interfaz;
 
+import entidades.Pokimon;
+
 /**
  *
  * @author alumno
  */
 public class jfBatalla1 extends javax.swing.JFrame {
+    Pokimon miPokemon = new Pokimon("Rulbasaur");
+    Pokimon Pokemonrival= new Pokimon("Charmander");
+    
+    
+    
+    
+    
+    
 
     /**
      * Creates new form jfBatalla1
@@ -17,6 +27,10 @@ public class jfBatalla1 extends javax.swing.JFrame {
     public jfBatalla1() {
         initComponents();
         this.setLocationRelativeTo(this);
+        jLabel4.setText(miPokemon.MostrarEstado());
+        jLabel5.setText(Pokemonrival.MostrarEstado());
+        
+        
         
     }
 
@@ -37,6 +51,8 @@ public class jfBatalla1 extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,6 +73,10 @@ public class jfBatalla1 extends javax.swing.JFrame {
 
         jButton3.setText("Usar poción");
 
+        jLabel4.setText("jLabel4");
+
+        jLabel5.setText("jLabel5");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -65,14 +85,6 @@ public class jfBatalla1 extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(177, 177, 177))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(115, 115, 115)
-                .addComponent(jButton1)
-                .addGap(42, 42, 42)
-                .addComponent(jButton3)
-                .addGap(38, 38, 38)
-                .addComponent(jButton2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(56, 56, 56)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -84,6 +96,20 @@ public class jfBatalla1 extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel3)
                         .addGap(68, 68, 68))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(115, 115, 115)
+                .addComponent(jButton1)
+                .addGap(42, 42, 42)
+                .addComponent(jButton3)
+                .addGap(38, 38, 38)
+                .addComponent(jButton2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(105, 105, 105)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addGap(108, 108, 108))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -97,7 +123,11 @@ public class jfBatalla1 extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(66, 66, 66)
                         .addComponent(jLabel3)))
-                .addGap(48, 48, 48)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5))
+                .addGap(23, 23, 23)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -152,6 +182,8 @@ public class jfBatalla1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables

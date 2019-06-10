@@ -6,10 +6,25 @@ public class Pokimon {
     private int vida;
     private int nivel;
 
-    public Pokimon(String nombre, int vida, int nivel) {
+    public Pokimon(String nombre) {
         this.nombre = nombre;
-        this.vida = vida;
-        this.nivel = nivel;
+        this.vida = 40 + nivel*5;
+        this.nivel =5;
+    }
+    
+    public String MostrarEstado(){
+        
+        String estado= this.nombre + " / " + this.vida+
+                " HP ";
+        return estado;
+    }
+    
+    
+    String Atacar(Pokimon contricante){
+        String resultado= "";
+        int ataque = (int) (Math.random()*6 + 5);        
+        int critico = (int) (Math.random() * 100);
+        return resultado;
     }
 
     public int getNivel() {

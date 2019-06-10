@@ -12,7 +12,7 @@ import entidades.Pokimon;
  * @author alumno
  */
 public class jfBatalla1 extends javax.swing.JFrame {
-    Pokimon miPokemon = new Pokimon("Rulbasaur");
+    Pokimon miPokemon = new Pokimon("Bulbasaur");
     Pokimon Pokemonrival= new Pokimon("Charmander");
     
     

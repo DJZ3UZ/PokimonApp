@@ -1,6 +1,7 @@
 
 package interfaz;
 import entidades.*;
+import javax.swing.JOptionPane;
 
 
 
@@ -71,6 +72,12 @@ public class jfBienvenido extends javax.swing.JFrame {
         jLabel2.setText("Nombre:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 280, -1, -1));
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 299, -1, -1));
+
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField1KeyReleased(evt);
+            }
+        });
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, 180, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -122,18 +129,28 @@ public class jfBienvenido extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String n = jTextField1.getText();
         nombre= n;
-        Boolean s = Masculino.isSelected();        
-        if (s){
-            jfEleccionMasculino marco = new jfEleccionMasculino(this);
-            marco.setVisible(true);
+        Boolean s = Masculino.isSelected(); 
+        if (jTextField1.getText().isEmpty()){
+            JOptionPane.showMessageDialog(rootPane, "Ingrese su nombre");
         }
         else{
+            if (s){
+            jfEleccionMasculino marco = new jfEleccionMasculino(this);
+            marco.setVisible(true);
+            }
+            else{
             jfEleccionFemenino marco = new jfEleccionFemenino(this);
-            marco.setVisible(true); 
-
+            marco.setVisible(true);
+            }
         }
+        
+        
 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
+        habilitarBoton();
+    }//GEN-LAST:event_jTextField1KeyReleased
 
     /**
      * @param args the command line arguments

@@ -21,6 +21,7 @@ public class jfBienvenido extends javax.swing.JFrame {
     public jfBienvenido() {       
         initComponents();
         transparenciaButton();
+        jButton1.setEnabled(false);
         this.setLocationRelativeTo(this);
     }
     private void transparenciaButton(){
@@ -30,6 +31,11 @@ public class jfBienvenido extends javax.swing.JFrame {
         Femenino.setOpaque(false);
         Femenino.setContentAreaFilled(false);
         Femenino.setBorderPainted(false);
+    }
+    public void habilitarBoton(){
+        if (!jTextField1.getText().isEmpty() && (!Masculino.isSelected()||!Femenino.isSelected())){
+            jButton1.setEnabled(true);
+        }
     }
     
     

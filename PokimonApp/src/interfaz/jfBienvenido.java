@@ -2,7 +2,7 @@
 package interfaz;
 import entidades.*;
 import javax.swing.JOptionPane;
-
+import java.applet.AudioClip;
 
 
 
@@ -22,6 +22,9 @@ public class jfBienvenido extends javax.swing.JFrame {
     public jfBienvenido() {       
         initComponents();
         transparenciaButton();
+        AudioClip musica;
+        musica = java.applet.Applet.newAudioClip(getClass().getResource("/musica/Titulo.wav"));
+        musica.play();
         jButton1.setEnabled(false);
         this.setLocationRelativeTo(this);
     }

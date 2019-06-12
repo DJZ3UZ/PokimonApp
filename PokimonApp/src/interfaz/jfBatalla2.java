@@ -43,6 +43,8 @@ public class jfBatalla2 extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(761, 567));
+        setMinimumSize(new java.awt.Dimension(761, 567));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("¡Hora de pelear!");
@@ -90,7 +92,7 @@ public class jfBatalla2 extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(230, 230, 230)
                         .addComponent(jLabel1)))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(218, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(133, 133, 133)
                 .addComponent(jLabel4)
@@ -118,10 +120,10 @@ public class jfBatalla2 extends javax.swing.JFrame {
                     .addComponent(jButton1)
                     .addComponent(jButton3)
                     .addComponent(jButton2))
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addContainerGap(113, Short.MAX_VALUE))
         );
 
-        pack();
+        setBounds(0, 0, 779, 614);
     }// </editor-fold>//GEN-END:initComponents
 
     /**

@@ -165,7 +165,7 @@ public class jfBienvenido extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "Ingrese su nombre");
         }
         else{
-            jfEleccionMasculino marco = new jfEleccionMasculino(this);
+            jfEleccion marco = new jfEleccion(this);
             marco.setVisible(true);
         }
         

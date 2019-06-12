@@ -12,11 +12,11 @@ import javax.swing.ImageIcon;
  *
  * @author alumno
  */
-public class jfEleccionMasculino extends javax.swing.JFrame {
+public class jfEleccion extends javax.swing.JFrame {
     private URL url;
     public jfBienvenido menu;
     
-    public jfEleccionMasculino() {
+    public jfEleccion() {
         initComponents();
         this.setLocationRelativeTo(this);
         if (jfBienvenido.Masculino.isSelected()){
@@ -30,7 +30,7 @@ public class jfEleccionMasculino extends javax.swing.JFrame {
             jLabel5.setIcon(sex);
         }
     }
-    public jfEleccionMasculino(jfBienvenido menu) {
+    public jfEleccion(jfBienvenido menu) {
         initComponents();
         this.menu = menu;        
         jLabel6.setText(menu.nombre);       
@@ -109,7 +109,7 @@ public class jfEleccionMasculino extends javax.swing.JFrame {
 
         jLabel6.setForeground(new java.awt.Color(255, 0, 0));
         jLabel6.setText("jLabel6");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 390, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 390, -1, -1));
 
         jLabel7.setForeground(new java.awt.Color(255, 0, 0));
         jLabel7.setText("Hola");
@@ -122,7 +122,7 @@ public class jfEleccionMasculino extends javax.swing.JFrame {
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo Eleccion.png"))); // NOI18N
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        setSize(new java.awt.Dimension(616, 590));
+        setSize(new java.awt.Dimension(628, 590));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -132,12 +132,12 @@ public class jfEleccionMasculino extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        jfApodo2 nombre = new jfApodo2();
+        jfApodo1 nombre = new jfApodo1();
         nombre.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        jfApodo3 nombre = new jfApodo3();
+        jfApodo1 nombre = new jfApodo1();
         nombre.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -158,21 +158,23 @@ public class jfEleccionMasculino extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(jfEleccionMasculino.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfEleccion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(jfEleccionMasculino.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfEleccion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(jfEleccionMasculino.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfEleccion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(jfEleccionMasculino.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfEleccion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new jfEleccionMasculino().setVisible(true);
+                new jfEleccion().setVisible(true);
             }
         });
     }

@@ -57,7 +57,6 @@ public class jfBatalla1 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(761, 567));
         setMinimumSize(new java.awt.Dimension(761, 567));
-        setPreferredSize(new java.awt.Dimension(761, 567));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -100,9 +99,6 @@ public class jfBatalla1 extends javax.swing.JFrame {
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 70, -1, 180));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo Batalla.png"))); // NOI18N
-        jLabel8.setMaximumSize(new java.awt.Dimension(761, 567));
-        jLabel8.setMinimumSize(new java.awt.Dimension(761, 567));
-        jLabel8.setPreferredSize(new java.awt.Dimension(761, 567));
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         setBounds(0, 0, 779, 566);

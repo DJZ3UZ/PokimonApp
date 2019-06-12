@@ -14,7 +14,7 @@ public class Pokimon {
     
     public String MostrarEstado(){
         
-        String estado= this.nombre + " / " + this.vida+
+        String estado= " / " + this.vida+
                 " HP ";
         return estado;
     }

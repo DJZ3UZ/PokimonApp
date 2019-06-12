@@ -20,11 +20,6 @@ public class jfEleccionFemenino extends javax.swing.JFrame {
         
     }
     
-    public void MostrarDatos(){
-        
-    }
-
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -40,6 +35,7 @@ public class jfEleccionFemenino extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(582, 511));
@@ -83,42 +79,48 @@ public class jfEleccionFemenino extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(418, 266, -1, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Misty_(anime_SL).png"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(166, 336, -1, -1));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Liza_NB_(Ilustración).png"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 310, -1, -1));
 
         jLabel6.setForeground(new java.awt.Color(255, 0, 0));
         jLabel6.setText("jLabel6");
         jLabel6.setToolTipText("");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 368, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 380, -1, -1));
 
         jLabel7.setForeground(new java.awt.Color(255, 0, 0));
         jLabel7.setText("Bienvenida");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 368, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 380, -1, -1));
 
         jLabel8.setForeground(new java.awt.Color(255, 0, 0));
         jLabel8.setText("¡Es hora de elegir tu Pokimon!");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 393, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 400, -1, -1));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/HopefulGreatIndianjackal-max-1mb.gif"))); // NOI18N
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(-80, 80, 270, 160));
 
-        setSize(new java.awt.Dimension(598, 550));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo Eleccion.png"))); // NOI18N
+        jLabel2.setMaximumSize(new java.awt.Dimension(520, 516));
+        jLabel2.setMinimumSize(new java.awt.Dimension(520, 516));
+        jLabel2.setPreferredSize(new java.awt.Dimension(520, 516));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 590, 530));
+
+        setSize(new java.awt.Dimension(606, 572));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        jfBatalla1 marco = new jfBatalla1();
-        marco.setVisible(true);
+        jfApodo1 nombre = new jfApodo1();
+        nombre.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        jfBatalla2 marco = new jfBatalla2();
-        marco.setVisible(true);
+        jfApodo2 nombre = new jfApodo2();
+        nombre.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        jfBatalla3 marco = new jfBatalla3();
-        marco.setVisible(true);
+        jfApodo3 nombre = new jfApodo3();
+        nombre.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
@@ -165,6 +167,7 @@ public class jfEleccionFemenino extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

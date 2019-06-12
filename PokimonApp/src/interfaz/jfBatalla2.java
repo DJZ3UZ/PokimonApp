@@ -2,6 +2,7 @@
 package interfaz;
 
 import entidades.Pokimon;
+import java.applet.AudioClip;
 
 /**
  *
@@ -18,6 +19,9 @@ public class jfBatalla2 extends javax.swing.JFrame {
     public jfBatalla2() {
         initComponents();
         this.setLocationRelativeTo(this);
+        AudioClip musica;
+        musica = java.applet.Applet.newAudioClip(getClass().getResource("/musica/Batalla.wav"));
+        musica.play();
         jLabel4.setText(miPokemon.MostrarEstado());
         jLabel5.setText(Pokemonrival.MostrarEstado());
     }

@@ -3,10 +3,13 @@ package interfaz;
 import entidades.*;
 import javax.swing.JOptionPane;
 import java.applet.AudioClip;
+import java.net.URL;
+import javax.swing.ImageIcon;
 
 
 
 public class jfBienvenido extends javax.swing.JFrame {
+    private URL url;
     public String nombre;
     public jfBienvenido menu;
 
@@ -15,18 +18,31 @@ public class jfBienvenido extends javax.swing.JFrame {
         this.menu = menu;
         jTextField1.setText(menu.nombre);
     }
-    
+
     
 
     
     public jfBienvenido() {       
         initComponents();
         transparenciaButton();
+        Imagen();
         AudioClip musica;
         musica = java.applet.Applet.newAudioClip(getClass().getResource("/musica/Titulo.wav"));
         musica.play();
         jButton1.setEnabled(false);
         this.setLocationRelativeTo(this);
+    }
+    public void Imagen(){
+        if (jfBienvenido.Masculino.isSelected()){
+            url = getClass().getResource("/imagenes/Red_(Pokémon).png");
+            ImageIcon sex = new ImageIcon(url);
+            jLabel9.setIcon(sex);
+        }
+        else if (jfBienvenido.Femenino.isSelected()){
+            url = getClass().getResource("/imagenes/Liza_NB_(Ilustración).png");
+            ImageIcon sex = new ImageIcon(url);
+            jLabel9.setIcon(sex);
+        }
     }
     private void transparenciaButton(){
         Masculino.setOpaque(false);
@@ -41,6 +57,7 @@ public class jfBienvenido extends javax.swing.JFrame {
             jButton1.setEnabled(true);
         }
     }
+    
     
     
 
@@ -61,6 +78,7 @@ public class jfBienvenido extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         Masculino = new javax.swing.JRadioButton();
         Femenino = new javax.swing.JRadioButton();
+        jLabel9 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -113,38 +131,42 @@ public class jfBienvenido extends javax.swing.JFrame {
         Sexo.add(Masculino);
         Masculino.setForeground(new java.awt.Color(255, 255, 0));
         Masculino.setText("Masculino");
+        Masculino.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MasculinoActionPerformed(evt);
+            }
+        });
         getContentPane().add(Masculino, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, -1, -1));
 
         Sexo.add(Femenino);
         Femenino.setForeground(new java.awt.Color(255, 255, 0));
         Femenino.setText("Femenino");
+        Femenino.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FemeninoActionPerformed(evt);
+            }
+        });
         getContentPane().add(Femenino, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 320, -1, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 280, -1, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fe7e94e869b9e995ebaa838eb60954bfcff57269_hq.jpg"))); // NOI18N
-        jLabel5.setMaximumSize(new java.awt.Dimension(542, 537));
-        jLabel5.setMinimumSize(new java.awt.Dimension(542, 537));
-        jLabel5.setPreferredSize(new java.awt.Dimension(542, 537));
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 500));
+        jLabel5.setMaximumSize(new java.awt.Dimension(554, 537));
+        jLabel5.setMinimumSize(new java.awt.Dimension(554, 537));
+        jLabel5.setPreferredSize(new java.awt.Dimension(554, 537));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        setBounds(0, 0, 542, 537);
+        setBounds(0, 0, 572, 584);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String n = jTextField1.getText();
         nombre= n;
-        Boolean s = Masculino.isSelected(); 
         if (jTextField1.getText().isEmpty()){
             JOptionPane.showMessageDialog(rootPane, "Ingrese su nombre");
         }
         else{
-            if (s){
-            jfEleccionMasculino marco = new jfEleccionMasculino(this);
+            jfEleccionMasculino marco = new jfEleccionMasculino();
             marco.setVisible(true);
-            }
-            else{
-            jfEleccionFemenino marco = new jfEleccionFemenino(this);
-            marco.setVisible(true);
-            }
         }
         
         
@@ -154,6 +176,14 @@ public class jfBienvenido extends javax.swing.JFrame {
     private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
         habilitarBoton();
     }//GEN-LAST:event_jTextField1KeyReleased
+
+    private void MasculinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MasculinoActionPerformed
+        Imagen();
+    }//GEN-LAST:event_MasculinoActionPerformed
+
+    private void FemeninoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FemeninoActionPerformed
+        Imagen();
+    }//GEN-LAST:event_FemeninoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -192,8 +222,8 @@ public class jfBienvenido extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JRadioButton Femenino;
-    private javax.swing.JRadioButton Masculino;
+    public static javax.swing.JRadioButton Femenino;
+    public static javax.swing.JRadioButton Masculino;
     public static javax.swing.ButtonGroup Sexo;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
@@ -204,6 +234,7 @@ public class jfBienvenido extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 

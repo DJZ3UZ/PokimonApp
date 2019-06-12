@@ -5,18 +5,30 @@
  */
 package interfaz;
 
+import java.net.URL;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author alumno
  */
 public class jfEleccionMasculino extends javax.swing.JFrame {
-
+    private URL url;
     public jfBienvenido menu;
     
     public jfEleccionMasculino() {
         initComponents();
         this.setLocationRelativeTo(this);
-        
+        if (jfBienvenido.Masculino.isSelected()){
+            url = getClass().getResource("/imagenes/Red_(Pokémon).png");
+            ImageIcon sex = new ImageIcon(url);
+            jLabel5.setIcon(sex);
+        }
+        else if (jfBienvenido.Femenino.isSelected()){
+            url = getClass().getResource("/imagenes/Liza_NB_(Ilustración).png");
+            ImageIcon sex = new ImageIcon(url);
+            jLabel5.setIcon(sex);
+        }
     }
     public jfEleccionMasculino(jfBienvenido menu) {
         initComponents();
@@ -97,10 +109,10 @@ public class jfEleccionMasculino extends javax.swing.JFrame {
 
         jLabel6.setForeground(new java.awt.Color(255, 0, 0));
         jLabel6.setText("jLabel6");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 390, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 390, -1, -1));
 
         jLabel7.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel7.setText("Bienvenido");
+        jLabel7.setText("Hola");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, -1, -1));
 
         jLabel8.setForeground(new java.awt.Color(255, 0, 0));

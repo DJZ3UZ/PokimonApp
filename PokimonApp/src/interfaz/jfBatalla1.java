@@ -7,6 +7,7 @@ package interfaz;
 
 import entidades.Pokimon;
 import java.applet.AudioClip;
+import javax.swing.JLabel;
 
 /**
  *
@@ -14,7 +15,8 @@ import java.applet.AudioClip;
  */
 public class jfBatalla1 extends javax.swing.JFrame {
     Pokimon miPokemon = new Pokimon("");
-    Pokimon Pokemonrival= new Pokimon("");   
+    Pokimon Pokemonrival= new Pokimon("");  
+    
     
     
 
@@ -29,6 +31,7 @@ public class jfBatalla1 extends javax.swing.JFrame {
         musica.play();
         jLabel4.setText(miPokemon.MostrarEstado());
         jLabel5.setText(Pokemonrival.MostrarEstado());
+        
     }
 
     /**

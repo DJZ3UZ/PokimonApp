@@ -84,7 +84,6 @@ public class jfBienvenido extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(554, 537));
         setMinimumSize(new java.awt.Dimension(554, 537));
-        setPreferredSize(new java.awt.Dimension(554, 537));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 41, -1, -1));
 
@@ -150,9 +149,6 @@ public class jfBienvenido extends javax.swing.JFrame {
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 280, -1, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fe7e94e869b9e995ebaa838eb60954bfcff57269_hq.jpg"))); // NOI18N
-        jLabel5.setMaximumSize(new java.awt.Dimension(554, 537));
-        jLabel5.setMinimumSize(new java.awt.Dimension(554, 537));
-        jLabel5.setPreferredSize(new java.awt.Dimension(554, 537));
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         setBounds(0, 0, 572, 584);

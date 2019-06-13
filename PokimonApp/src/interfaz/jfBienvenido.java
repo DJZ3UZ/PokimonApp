@@ -9,7 +9,7 @@ import javax.swing.ImageIcon;
 
 
 public class jfBienvenido extends javax.swing.JFrame {
-    private URL url;
+    public static URL url;
     public String nombre;
     public jfBienvenido menu;
 
@@ -32,7 +32,7 @@ public class jfBienvenido extends javax.swing.JFrame {
         jButton1.setEnabled(false);
         this.setLocationRelativeTo(this);
     }
-    public void Imagen(){
+    private void Imagen(){
         if (jfBienvenido.Masculino.isSelected()){
             url = getClass().getResource("/imagenes/Red_(Pokémon).png");
             ImageIcon sex = new ImageIcon(url);
@@ -57,8 +57,6 @@ public class jfBienvenido extends javax.swing.JFrame {
             jButton1.setEnabled(true);
         }
     }
-    
-    
     
 
   

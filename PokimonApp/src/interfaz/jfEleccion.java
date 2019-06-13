@@ -13,29 +13,41 @@ import javax.swing.ImageIcon;
  * @author alumno
  */
 public class jfEleccion extends javax.swing.JFrame {
-    private URL url;
     public jfBienvenido menu;
+    public String apodo;
     
     public jfEleccion() {
         initComponents();
         this.setLocationRelativeTo(this);
-        if (jfBienvenido.Masculino.isSelected()){
-            url = getClass().getResource("/imagenes/Red_(Pokémon).png");
-            ImageIcon sex = new ImageIcon(url);
-            jLabel5.setIcon(sex);
-        }
-        else if (jfBienvenido.Femenino.isSelected()){
-            url = getClass().getResource("/imagenes/Liza_NB_(Ilustración).png");
-            ImageIcon sex = new ImageIcon(url);
-            jLabel5.setIcon(sex);
-        }
+        transparenciaButton();
+    }
+
+    private void transparenciaButton(){
+        Bulbasaur.setOpaque(false);
+        Bulbasaur.setContentAreaFilled(false);
+        Bulbasaur.setBorderPainted(false);
+        Charmander.setOpaque(false);
+        Charmander.setContentAreaFilled(false);
+        Charmander.setBorderPainted(false);
+        Squirtle.setOpaque(false);
+        Squirtle.setContentAreaFilled(false);
+        Squirtle.setBorderPainted(false);
     }
     public jfEleccion(jfBienvenido menu) {
         initComponents();
         this.menu = menu;        
-        jLabel6.setText(menu.nombre);       
+        jLabel6.setText(menu.nombre); 
+        if (jfBienvenido.Masculino.isSelected()){
+            jfBienvenido.url = getClass().getResource("/imagenes/Red_(Pokémon).png");
+            ImageIcon sex = new ImageIcon(jfBienvenido.url);
+            jLabel5.setIcon(sex);
+        }
+        else if (jfBienvenido.Femenino.isSelected()){
+            jfBienvenido.url = getClass().getResource("/imagenes/Liza_NB_(Ilustración).png");
+            ImageIcon sex = new ImageIcon(jfBienvenido.url);
+            jLabel5.setIcon(sex);
+        }
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -45,18 +57,22 @@ public class jfEleccion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Pokimon = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        Bulbasaur = new javax.swing.JRadioButton();
+        Charmander = new javax.swing.JRadioButton();
+        Squirtle = new javax.swing.JRadioButton();
+        jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(582, 511));
@@ -67,79 +83,83 @@ public class jfEleccion extends javax.swing.JFrame {
         jLabel1.setText("Escoge tu Pokimon");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/HopefulGreatIndianjackal-max-1mb.gif"))); // NOI18N
-        jLabel2.setToolTipText("");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-60, 70, 280, 180));
-
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/charmander.gif"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Squirtle 1.gif"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, 260, -1));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton1.setText("Elegir");
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Red_(Pokémon).png"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 120, 210));
+
+        jLabel6.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel6.setText("jLabel6");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 390, -1, -1));
+
+        jLabel7.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel7.setText("Hola");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 390, -1, -1));
+
+        jLabel8.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel8.setText("¡Es hora de elegir tu Pokimon!");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, -1, -1));
+
+        Pokimon.add(Bulbasaur);
+        Bulbasaur.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Bulbasaur.setForeground(new java.awt.Color(0, 0, 204));
+        Bulbasaur.setText("Bulbasaur");
+        Bulbasaur.setContentAreaFilled(false);
+        Bulbasaur.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Bulbasaur.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        Bulbasaur.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(Bulbasaur, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 75, 150, 220));
+
+        Pokimon.add(Charmander);
+        Charmander.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Charmander.setForeground(new java.awt.Color(0, 0, 204));
+        Charmander.setText("Charmander");
+        Charmander.setContentAreaFilled(false);
+        Charmander.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Charmander.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(Charmander, new org.netbeans.lib.awtextra.AbsoluteConstraints(245, 95, 140, 200));
+
+        Pokimon.add(Squirtle);
+        Squirtle.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Squirtle.setForeground(new java.awt.Color(0, 0, 204));
+        Squirtle.setText("Squirtle");
+        Squirtle.setContentAreaFilled(false);
+        Squirtle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Squirtle.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(Squirtle, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 85, 160, 210));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/HopefulGreatIndianjackal-max-1mb.gif"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 80, 280, 170));
+
+        jButton1.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
+        jButton1.setText("Continuar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 480, 110, 30));
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton2.setText("Elegir");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, -1, -1));
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel9.setText("Ingresa el nuevo nombre de tu Pokimon:");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 340, -1, -1));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 332, 170, 30));
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton3.setText("Elegir");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, -1, -1));
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo Eleccion.png"))); // NOI18N
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 550));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Red_(Pokémon).png"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 120, 210));
-
-        jLabel6.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel6.setText("jLabel6");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 390, -1, -1));
-
-        jLabel7.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel7.setText("Hola");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, -1, -1));
-
-        jLabel8.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel8.setText("¡Es hora de elegir tu Pokimon!");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 420, -1, -1));
-
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo Eleccion.png"))); // NOI18N
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        setSize(new java.awt.Dimension(628, 590));
+        setSize(new java.awt.Dimension(638, 590));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        jfApodo1 nombre = new jfApodo1();
-        nombre.setVisible(true);
+        jfBatalla marco = new jfBatalla();
+        marco.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        jfApodo1 nombre = new jfApodo1();
-        nombre.setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        jfApodo1 nombre = new jfApodo1();
-        nombre.setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,10 +200,13 @@ public class jfEleccion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static javax.swing.JRadioButton Bulbasaur;
+    public static javax.swing.JRadioButton Charmander;
+    public static javax.swing.ButtonGroup Pokimon;
+    public static javax.swing.JRadioButton Squirtle;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -192,5 +215,6 @@ public class jfEleccion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

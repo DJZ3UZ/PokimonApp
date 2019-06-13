@@ -13,7 +13,7 @@ import javax.swing.JLabel;
  *
  * @author alumno
  */
-public class jfBatalla1 extends javax.swing.JFrame {
+public class jfBatalla extends javax.swing.JFrame {
     Pokimon miPokemon = new Pokimon("");
     Pokimon Pokemonrival= new Pokimon("");  
     
@@ -23,7 +23,7 @@ public class jfBatalla1 extends javax.swing.JFrame {
     /**
      * Creates new form jfBatalla1
      */
-    public jfBatalla1() {
+    public jfBatalla() {
         initComponents();
         this.setLocationRelativeTo(this);
         AudioClip musica;
@@ -124,20 +124,21 @@ public class jfBatalla1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(jfBatalla1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfBatalla.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(jfBatalla1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfBatalla.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(jfBatalla1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfBatalla.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(jfBatalla1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfBatalla.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new jfBatalla1().setVisible(true);
+                new jfBatalla().setVisible(true);
             }
         });
     }

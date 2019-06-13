@@ -18,14 +18,33 @@ public class Pokimon {
                 " HP ";
         return estado;
     }
-    
-    
-    String Atacar(Pokimon contricante){
+    public String Atacar(Pokimon contricante){
         String resultado= "";
-        int ataque = (int) (Math.random()*6 + 5);        
-        int critico = (int) (Math.random() * 100);
+        int ataque = (int) (Math.random()*5 + 5);        
+        int critico = (int)(Math.random()*100);
+        int esquivar =(int)(Math.random()*100);
+        
+        if(critico<=20){
+            resultado= contricante.nombre + " recibió un ataque crítico de " + ataque;
+        }
+        else if(critico<=15){
+            resultado= contricante.nombre + " esquivó un ataque ";
+        }
+        else{
+            resultado= contricante.nombre + "recibió un ataque de " + ataque;
+            
+        }
         return resultado;
     }
+    public String UsarHP(Pokimon este){
+        String hp ="";
+        int HP =this.vida + 15;
+        este.vida= HP;
+        hp = este.nombre + " ha usado la poción, su vida aumenta a: " + HP;
+        return hp;
+    }
+    
+   
 
     public int getNivel() {
         return nivel;

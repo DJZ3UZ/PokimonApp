@@ -10,6 +10,7 @@ import java.applet.AudioClip;
 import java.net.URL;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -119,6 +120,11 @@ public class jfBatalla extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 520, 120));
 
         jButton2.setText("Retirarse");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 460, -1, -1));
 
         jButton1.setText("Atacar");
@@ -147,6 +153,11 @@ public class jfBatalla extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(779, 566));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        JOptionPane.showMessageDialog(rootPane, "Has huido de la batalla.");
+        dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

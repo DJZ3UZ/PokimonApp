@@ -112,7 +112,7 @@ public class jfEleccion extends javax.swing.JFrame {
         Bulbasaur.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Bulbasaur.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         Bulbasaur.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(Bulbasaur, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 75, 150, 220));
+        getContentPane().add(Bulbasaur, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 150, 200));
 
         Pokimon.add(Charmander);
         Charmander.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -132,8 +132,8 @@ public class jfEleccion extends javax.swing.JFrame {
         Squirtle.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         getContentPane().add(Squirtle, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 85, 160, 210));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/HopefulGreatIndianjackal-max-1mb.gif"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 80, 280, 170));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Bulbasaur.gif"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 90, 280, 170));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
         jButton1.setText("Continuar");
@@ -150,7 +150,7 @@ public class jfEleccion extends javax.swing.JFrame {
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 332, 170, 30));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo Eleccion.png"))); // NOI18N
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 550));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 550));
 
         setSize(new java.awt.Dimension(638, 590));
         setLocationRelativeTo(null);

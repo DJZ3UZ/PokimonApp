@@ -7,6 +7,8 @@ package interfaz;
 
 import entidades.Pokimon;
 import java.applet.AudioClip;
+import java.net.URL;
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 /**
@@ -14,21 +16,59 @@ import javax.swing.JLabel;
  * @author alumno
  */
 public class jfBatalla extends javax.swing.JFrame {
+    public URL url;
+    public URL pokimonp;
+    public URL pokimonc;
     Pokimon miPokemon = new Pokimon("");
-    Pokimon Pokemonrival= new Pokimon("");  
-    
-    
-    
+    Pokimon Pokemonrival= new Pokimon(""); 
 
-    /**
-     * Creates new form jfBatalla1
-     */
     public jfBatalla() {
         initComponents();
         this.setLocationRelativeTo(this);
         AudioClip musica;
         musica = java.applet.Applet.newAudioClip(getClass().getResource("/musica/Batalla.wav"));
         musica.play();
+        initComponents(); 
+        if (jfBienvenido.Masculino.isSelected()){
+            jfBienvenido.url = getClass().getResource("/imagenes/Red_(Pokémon).png");
+            url = getClass().getResource("/imagenes/Misty.png");
+            ImageIcon con = new ImageIcon(url);
+            ImageIcon sex = new ImageIcon(jfBienvenido.url);
+            jLabel7.setIcon(sex);
+            jLabel6.setIcon(con);
+        }
+        else if (jfBienvenido.Femenino.isSelected()){
+            jfBienvenido.url = getClass().getResource("/imagenes/Liza_NB_(Ilustración).png");
+            url = getClass().getResource("/imagenes/Ash.png");
+            ImageIcon con = new ImageIcon(url);
+            ImageIcon sex = new ImageIcon(jfBienvenido.url);
+            jLabel7.setIcon(sex);
+            jLabel6.setIcon(con);
+        }
+        if (jfEleccion.Bulbasaur.isSelected()){
+            pokimonp = getClass().getResource("/imagenes/Bulbasaur.gif");
+            pokimonc = getClass().getResource("/imagenes/charmander.gif");
+            ImageIcon prop = new ImageIcon(pokimonp);
+            ImageIcon cont = new ImageIcon(pokimonc);
+            jLabel2.setIcon(prop);
+            jLabel3.setIcon(cont);            
+        }
+        else if (jfEleccion.Charmander.isSelected()){
+            pokimonp = getClass().getResource("/imagenes/charmander.gif");
+            pokimonc = getClass().getResource("/imagenes/Squirtle 1.gif");
+            ImageIcon prop = new ImageIcon(pokimonp);
+            ImageIcon cont = new ImageIcon(pokimonc);
+            jLabel2.setIcon(prop);
+            jLabel3.setIcon(cont);            
+        }
+        else if (jfEleccion.Squirtle.isSelected()){
+            pokimonp = getClass().getResource("/imagenes/Squirtle 1.gif");
+            pokimonc = getClass().getResource("/imagenes/Bulbasaur.gif");
+            ImageIcon prop = new ImageIcon(pokimonp);
+            ImageIcon cont = new ImageIcon(pokimonc);
+            jLabel2.setIcon(prop);
+            jLabel3.setIcon(cont);            
+        }
         jLabel4.setText(miPokemon.MostrarEstado());
         jLabel5.setText(Pokemonrival.MostrarEstado());
         
@@ -67,7 +107,7 @@ public class jfBatalla extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/HopefulGreatIndianjackal-max-1mb.gif"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 280, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 270, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/charmander.gif"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, -1, -1));
@@ -98,13 +138,14 @@ public class jfBatalla extends javax.swing.JFrame {
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Red_(Pokémon).png"))); // NOI18N
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/entrenadora rival.png"))); // NOI18N
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 70, -1, 180));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Misty.png"))); // NOI18N
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 30, -1, 250));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo Batalla.png"))); // NOI18N
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -3, -1, 570));
 
-        setBounds(0, 0, 779, 566);
+        setSize(new java.awt.Dimension(779, 566));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**

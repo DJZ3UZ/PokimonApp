@@ -108,7 +108,7 @@ public class jfBatalla extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Bulbasaur.gif"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 270, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 270, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/charmander.gif"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, -1, -1));
@@ -139,11 +139,11 @@ public class jfBatalla extends javax.swing.JFrame {
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 460, -1, -1));
 
         jLabel4.setForeground(new java.awt.Color(0, 0, 204));
-        jLabel4.setText("jLabel4");
+        jLabel4.setText("estadodemipok");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, -1, -1));
 
         jLabel5.setForeground(new java.awt.Color(0, 0, 204));
-        jLabel5.setText("jLabel5");
+        jLabel5.setText("estadodepokrival");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, -1, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Red_(Pokémon).png"))); // NOI18N
@@ -161,6 +161,9 @@ public class jfBatalla extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         JOptionPane.showMessageDialog(rootPane, " Has huido de la batalla.");
+        jfBienvenido marco = new jfBienvenido();
+        marco.setVisible(true);
+        
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -181,6 +184,8 @@ public class jfBatalla extends javax.swing.JFrame {
             jTextArea1.append(resultado + " \n");
             
         }
+        jLabel4.setText(miPokemon.MostrarEstado());
+        jLabel5.setText(Pokemonrival.MostrarEstado());
 
     }//GEN-LAST:event_jButton1ActionPerformed
 

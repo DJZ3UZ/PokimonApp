@@ -20,8 +20,8 @@ public class jfBatalla extends javax.swing.JFrame {
     public URL url;
     public URL pokimonp;
     public URL pokimonc;
-    Pokimon miPokemon = new Pokimon("");
-    Pokimon Pokemonrival= new Pokimon(""); 
+    Pokimon miPokemon = new Pokimon(" Bulbasaur ");
+    Pokimon Pokemonrival= new Pokimon(" Charmander "); 
 
     public jfBatalla() {
         initComponents();
@@ -128,6 +128,11 @@ public class jfBatalla extends javax.swing.JFrame {
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 460, -1, -1));
 
         jButton1.setText("Atacar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 460, -1, -1));
 
         jButton3.setText("Usar poción");
@@ -155,9 +160,29 @@ public class jfBatalla extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        JOptionPane.showMessageDialog(rootPane, "Has huido de la batalla.");
+        JOptionPane.showMessageDialog(rootPane, " Has huido de la batalla.");
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        double p1 = Math.random();
+        double p2 = Math.random();
+        if(p1>p2){
+            String resultado= miPokemon.Atacar(Pokemonrival);
+            jTextArea1.append(resultado + "\n ");
+            String resultado2= Pokemonrival.Atacar(miPokemon);
+            jTextArea1.append(resultado + " \n");
+        }
+        else{
+            String resultado2= Pokemonrival.Atacar(miPokemon);
+            jTextArea1.append(resultado2 + " \n");
+            String resultado= miPokemon.Atacar(Pokemonrival);
+            jTextArea1.append(resultado + " \n");
+            
+        }
+
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

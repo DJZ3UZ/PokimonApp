@@ -74,6 +74,21 @@ public class jfBatalla extends javax.swing.JFrame {
         jLabel5.setText(Pokemonrival.MostrarEstado());
         
     }
+    public void AnalizarSituacion(){
+        if(miPokemon.vida==0){
+            jTextArea1.append(miPokemon.nombre + " ,ya no puede continuar,"
+            + Pokemonrival.nombre + "gana la batalla.");
+            JOptionPane.showMessageDialog(null," Perdiste la batalla.");
+            jButton1.setEnabled(false);
+        }
+        if(Pokemonrival.vida==0){
+            jTextArea1.append(Pokemonrival.nombre + " ,ya no puede continuar,"
+            + miPokemon.nombre + "gana la batalla.");
+            
+            jButton1.setEnabled(false);
+            JOptionPane.showMessageDialog(null," Ganaste la batalla.");
+        }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -186,6 +201,9 @@ public class jfBatalla extends javax.swing.JFrame {
         }
         jLabel4.setText(miPokemon.MostrarEstado());
         jLabel5.setText(Pokemonrival.MostrarEstado());
+        
+        
+        AnalizarSituacion();
 
     }//GEN-LAST:event_jButton1ActionPerformed
 

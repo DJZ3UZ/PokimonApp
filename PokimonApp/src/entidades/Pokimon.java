@@ -2,9 +2,9 @@
 package entidades;
 
 public class Pokimon {
-    private String nombre;
-    private int vida;
-    private int nivel;
+    public String nombre;
+    public int vida;
+    public int nivel;
 
     public Pokimon(String nombre) {
         this.nombre = nombre;
@@ -14,7 +14,7 @@ public class Pokimon {
     
     public String MostrarEstado(){
         
-        String estado= " / " + this.vida+
+        String estado= this.nombre + " / " + this.vida +
                 " HP ";
         return estado;
     }
@@ -25,9 +25,17 @@ public class Pokimon {
         int esquivar =(int)(Math.random()*100);
         
         if(critico<=20){
+            ataque =(int)(ataque*2.5);
             resultado= contricante.nombre + " recibió un ataque crítico de " + ataque;
         }
-        else if(critico<=15){
+        contricante.vida = contricante.vida- ataque;
+        
+        if(contricante.vida<0){
+            contricante.vida=0;
+        }
+        
+        
+        if(critico<=15){
             resultado= contricante.nombre + " esquivó un ataque ";
         }
         else{

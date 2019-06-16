@@ -58,7 +58,7 @@ public class Pokimon {
        
       
     
-    public String PuntosdeVidaHP(Pokimon p){
+    public String usarPuntosdeVidaHP(Pokimon p){
         String hp="";
         int HP= p.vida + 15;
         p.vida=HP;

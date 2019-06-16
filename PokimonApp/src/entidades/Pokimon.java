@@ -58,19 +58,19 @@ public class Pokimon {
        
       
     
-    public String PuntosdeVidaHP(Pokimon this){
+    public String PuntosdeVidaHP(Pokimon p){
         String hp="";
-        int HP= this.vida + 15;
-        this.vida=HP;
-        if(this.vida >= 65){
-            this.vida = 65;
+        int HP= p.vida + 15;
+        p.vida=HP;
+        if(p.vida >= 65){
+            p.vida = 65;
             HP = HP-15;
         }
-        if(this.vida>=65){
-            hp= this.nombre + " ha usado poción, su vida es " + this.vida;
+        if(p.vida>=65){
+            hp= p.nombre + " ha usado poción, su vida es " + p.vida;
         }
         else{
-            hp = this.nombre + " ha usado pocion, su vida aumenta " + HP;
+            hp = p.nombre + " ha usado pocion, su vida aumenta " + HP;
         }
         return hp;
         

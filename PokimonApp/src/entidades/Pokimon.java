@@ -5,78 +5,78 @@ public class Pokimon {
     public String nombre;
     public int vida;
     public int nivel;
+    public int pocima;
 
     public Pokimon(String nombre) {
         this.nombre = nombre;
-        this.vida = 40 + nivel*5;
+        this.vida = 40 + this.nivel*5;
         this.nivel =5;
     }
     
     public String MostrarEstado(){
-        
-        String estado= this.nombre + " / " + this.vida +
-                " HP ";
+        String estado =" / " + this.vida + " HP";
         return estado;
+        
+        
     }
-    public String Atacar(Pokimon contricante){
+    public String Atacar(Pokimon contrincante){
         String resultado= "";
         int ataque = (int) (Math.random()*5 + 5);        
         int critico = (int)(Math.random()*100);
-        int esquivar =(int)(Math.random()*100);
+        int esquivar = (int)(Math.random()*100);
         
-        if(critico<=20){
-            ataque =(int)(ataque*2.5);
-            resultado= contricante.nombre + " recibió un ataque crítico de " + ataque;
-        }
-        contricante.vida = contricante.vida- ataque;
+       if(critico<=20){
+           ataque=(int)(ataque*2);
+       }
+       if(esquivar<=15){
+           ataque=(int)(ataque*0);
+       }
+       contrincante.vida = contrincante.vida - ataque;
         
-        if(contricante.vida<0){
-            contricante.vida=0;
+       if(contrincante.vida <= 0){
+           contrincante.vida = 0;
         }
         
+        if (critico <= 20) {
+            resultado = contrincante.nombre 
+                    + " recibió un ataque crítico de " + ataque;
+        if(esquivar <= 15){
+            resultado = contrincante.nombre
+                    + " esquivo el ataque.";
+        }
+        }
+        else {
+            resultado = contrincante.nombre 
+                    + " recibió un ataque de " + ataque;
+        }
         
-        if(critico<=15){
-            resultado= contricante.nombre + " esquivó un ataque ";
-        }
-        else{
-            resultado= contricante.nombre + "recibió un ataque de " + ataque;
-            
-        }
         return resultado;
     }
-    public String UsarHP(Pokimon este){
-        String hp ="";
-        int HP =this.vida + 15;
-        este.vida= HP;
-        hp = este.nombre + " ha usado la poción, su vida aumenta a: " + HP;
+        
+           
+       
+       
+      
+    
+    public String PuntosdeVidaHP(Pokimon this){
+        String hp="";
+        int HP= this.vida + 15;
+        this.vida=HP;
+        if(this.vida >= 65){
+            this.vida = 65;
+            HP = HP-15;
+        }
+        if(this.vida>=65){
+            hp= this.nombre + " ha usado poción, su vida es " + this.vida;
+        }
+        else{
+            hp = this.nombre + " ha usado pocion, su vida aumenta " + HP;
+        }
         return hp;
+        
+        
     }
     
-   
-
-    public int getNivel() {
-        return nivel;
-    }
-
-    public void setNivel(int nivel) {
-        this.nivel = nivel;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public int getVida() {
-        return vida;
-    }
-
-    public void setVida(int vida) {
-        this.vida = vida;
-    }
     
     
     

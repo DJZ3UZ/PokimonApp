@@ -78,7 +78,7 @@ public class jfBatalla extends javax.swing.JFrame {
         if(miPokemon.vida==0){
             jTextArea1.append(miPokemon.nombre + " ,ya no puede continuar,"
             + Pokemonrival.nombre + "gana la batalla.");
-            JOptionPane.showMessageDialog(null," Perdiste la batalla.");
+            
             jButton1.setEnabled(false);
         }
         if(Pokemonrival.vida==0){

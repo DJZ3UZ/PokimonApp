@@ -132,6 +132,11 @@ public class jfEleccion extends javax.swing.JFrame {
         Squirtle.setContentAreaFilled(false);
         Squirtle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Squirtle.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Squirtle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SquirtleActionPerformed(evt);
+            }
+        });
         getContentPane().add(Squirtle, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 85, 160, 210));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Bulbasaur.gif"))); // NOI18N
@@ -162,6 +167,10 @@ public class jfEleccion extends javax.swing.JFrame {
         jfBatalla marco = new jfBatalla();
         marco.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void SquirtleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SquirtleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SquirtleActionPerformed
 
     /**
      * @param args the command line arguments

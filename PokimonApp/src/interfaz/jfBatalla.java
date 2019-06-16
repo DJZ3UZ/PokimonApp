@@ -11,6 +11,7 @@ import java.net.URL;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import interfaz.jfEleccion.*;
 
 /**
  *
@@ -20,8 +21,8 @@ public class jfBatalla extends javax.swing.JFrame {
     public URL url;
     public URL pokimonp;
     public URL pokimonc;
-    Pokimon miPokemon = new Pokimon(" Bulbasaur ");
-    Pokimon Pokemonrival= new Pokimon(" Charmander "); 
+    Pokimon miPokemon = new Pokimon(jfEleccion.nombre);
+    Pokimon Pokemonrival= new Pokimon(jfEleccion.rival); 
 
     public jfBatalla() {
         initComponents();
@@ -111,9 +112,11 @@ public class jfBatalla extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(761, 567));
@@ -177,9 +180,6 @@ public class jfBatalla extends javax.swing.JFrame {
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Misty.png"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 30, -1, 250));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo Batalla.png"))); // NOI18N
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -3, -1, 570));
-
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton5.setText("Usar poción 2");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -197,6 +197,17 @@ public class jfBatalla extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 450, -1, -1));
+
+        jLabel9.setForeground(new java.awt.Color(0, 0, 204));
+        jLabel9.setText("jLabel9");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, -1, -1));
+
+        jLabel10.setForeground(new java.awt.Color(0, 0, 204));
+        jLabel10.setText("jLabel10");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(442, 270, -1, -1));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo Batalla.png"))); // NOI18N
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 530));
 
         setSize(new java.awt.Dimension(779, 566));
         setLocationRelativeTo(null);
@@ -309,13 +320,15 @@ public class jfBatalla extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
+    public static javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    public static javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    public static javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables

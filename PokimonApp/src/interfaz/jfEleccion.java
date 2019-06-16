@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package interfaz;
-
+import Atxy2k.CustomTextField.RestrictedTextField;
 import java.net.URL;
 import javax.swing.ImageIcon;
 
@@ -14,12 +14,15 @@ import javax.swing.ImageIcon;
  */
 public class jfEleccion extends javax.swing.JFrame {
     public jfBienvenido menu;
-    public String apodo;
+    public static String nombre;
+    public static String rival;
     
     public jfEleccion() {
         initComponents();
         this.setLocationRelativeTo(this);
         transparenciaButton();
+        RestrictedTextField r = new RestrictedTextField(jTextField1);
+        r.setLimit(9);
     }
 
     private void transparenciaButton(){
@@ -160,6 +163,42 @@ public class jfEleccion extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         jfBatalla marco = new jfBatalla();
+        if (!jTextField1.getText().isEmpty()){
+            nombre= jTextField1.getText();
+            jfBatalla.jLabel9.setText(nombre);
+            if (jfEleccion.Bulbasaur.isSelected()){
+                rival="Charmander";
+                jfBatalla.jLabel10.setText(rival);
+            }
+            if (jfEleccion.Charmander.isSelected()){
+                rival="Squirtle";
+                jfBatalla.jLabel10.setText(rival);
+            }
+            if (jfEleccion.Squirtle.isSelected()){
+                rival="Bulbasaur";
+                jfBatalla.jLabel10.setText(rival);
+            }
+        }
+        if (jTextField1.getText().isEmpty()){
+            if (jfEleccion.Bulbasaur.isSelected()){
+                nombre="Bulbasaur";
+                rival="Charmander";
+                jfBatalla.jLabel9.setText(nombre);
+                jfBatalla.jLabel10.setText(rival);
+            }
+            if (jfEleccion.Charmander.isSelected()){
+                nombre="Charmander";
+                rival="Squirtle";
+                jfBatalla.jLabel9.setText(nombre);
+                jfBatalla.jLabel10.setText(rival);
+            }
+            if (jfEleccion.Squirtle.isSelected()){
+                nombre="Squirtle";
+                rival="Bulbasaur";
+                jfBatalla.jLabel9.setText(nombre);
+                jfBatalla.jLabel10.setText(rival);
+            }
+        }
         marco.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 

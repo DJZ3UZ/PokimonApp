@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package interfaz;
-
+import Atxy2k.CustomTextField.RestrictedTextField;
 import java.net.URL;
 import javax.swing.ImageIcon;
 
@@ -14,12 +14,15 @@ import javax.swing.ImageIcon;
  */
 public class jfEleccion extends javax.swing.JFrame {
     public jfBienvenido menu;
-    public String apodo;
+    public static String nombre;
+    public static String rival;
     
     public jfEleccion() {
         initComponents();
         this.setLocationRelativeTo(this);
         transparenciaButton();
+        RestrictedTextField r = new RestrictedTextField(jTextField1);
+        r.setLimit(9);
     }
 
     private void transparenciaButton(){
@@ -86,8 +89,8 @@ public class jfEleccion extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/charmander.gif"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Squirtle 1.gif"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, 260, -1));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Squirtle 1_2.gif"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 130, 130, 100));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Red_(Pokémon).png"))); // NOI18N
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 120, 210));
@@ -139,8 +142,8 @@ public class jfEleccion extends javax.swing.JFrame {
         });
         getContentPane().add(Squirtle, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 85, 160, 210));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Bulbasaur.gif"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 90, 280, 170));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Bulbasaur_1.gif"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 160, 170));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
         jButton1.setText("Continuar");
@@ -165,6 +168,42 @@ public class jfEleccion extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         jfBatalla marco = new jfBatalla();
+        if (!jTextField1.getText().isEmpty()){
+            nombre= jTextField1.getText();
+            jfBatalla.jLabel9.setText(nombre);
+            if (jfEleccion.Bulbasaur.isSelected()){
+                rival="Charmander";
+                jfBatalla.jLabel10.setText(rival);
+            }
+            if (jfEleccion.Charmander.isSelected()){
+                rival="Squirtle";
+                jfBatalla.jLabel10.setText(rival);
+            }
+            if (jfEleccion.Squirtle.isSelected()){
+                rival="Bulbasaur";
+                jfBatalla.jLabel10.setText(rival);
+            }
+        }
+        if (jTextField1.getText().isEmpty()){
+            if (jfEleccion.Bulbasaur.isSelected()){
+                nombre="Bulbasaur";
+                rival="Charmander";
+                jfBatalla.jLabel9.setText(nombre);
+                jfBatalla.jLabel10.setText(rival);
+            }
+            if (jfEleccion.Charmander.isSelected()){
+                nombre="Charmander";
+                rival="Squirtle";
+                jfBatalla.jLabel9.setText(nombre);
+                jfBatalla.jLabel10.setText(rival);
+            }
+            if (jfEleccion.Squirtle.isSelected()){
+                nombre="Squirtle";
+                rival="Bulbasaur";
+                jfBatalla.jLabel9.setText(nombre);
+                jfBatalla.jLabel10.setText(rival);
+            }
+        }
         marco.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 

@@ -67,12 +67,12 @@
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imagenes/Squirtle 1.gif"/>
+          <Image iconType="3" name="/imagenes/Squirtle 1_2.gif"/>
         </Property>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="290" y="90" width="260" height="-1"/>
+          <AbsoluteConstraints x="380" y="130" width="130" height="100"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -215,12 +215,12 @@
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imagenes/Bulbasaur.gif"/>
+          <Image iconType="3" name="/imagenes/Bulbasaur_1.gif"/>
         </Property>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="-40" y="90" width="280" height="170"/>
+          <AbsoluteConstraints x="60" y="90" width="160" height="170"/>
         </Constraint>
       </Constraints>
     </Component>

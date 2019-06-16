@@ -9,9 +9,7 @@ import entidades.Pokimon;
 import java.applet.AudioClip;
 import java.net.URL;
 import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import interfaz.jfEleccion.*;
 
 /**
  *
@@ -48,7 +46,7 @@ public class jfBatalla extends javax.swing.JFrame {
             jLabel6.setIcon(con);
         }
         if (jfEleccion.Bulbasaur.isSelected()){
-            pokimonp = getClass().getResource("/imagenes/Bulbasaur.gif");
+            pokimonp = getClass().getResource("/imagenes/Bulbasaur_1.gif");
             pokimonc = getClass().getResource("/imagenes/charmander.gif");
             ImageIcon prop = new ImageIcon(pokimonp);
             ImageIcon cont = new ImageIcon(pokimonc);
@@ -57,15 +55,15 @@ public class jfBatalla extends javax.swing.JFrame {
         }
         else if (jfEleccion.Charmander.isSelected()){
             pokimonp = getClass().getResource("/imagenes/charmander.gif");
-            pokimonc = getClass().getResource("/imagenes/Squirtle 1.gif");
+            pokimonc = getClass().getResource("/imagenes/Squirtle 1_2.gif");
             ImageIcon prop = new ImageIcon(pokimonp);
             ImageIcon cont = new ImageIcon(pokimonc);
             jLabel2.setIcon(prop);
             jLabel3.setIcon(cont);            
         }
         else if (jfEleccion.Squirtle.isSelected()){
-            pokimonp = getClass().getResource("/imagenes/Squirtle 1.gif");
-            pokimonc = getClass().getResource("/imagenes/Bulbasaur.gif");
+            pokimonp = getClass().getResource("/imagenes/Squirtle 1_2.gif");
+            pokimonc = getClass().getResource("/imagenes/Bulbasaur_1.gif");
             ImageIcon prop = new ImageIcon(pokimonp);
             ImageIcon cont = new ImageIcon(pokimonc);
             jLabel2.setIcon(prop);
@@ -76,11 +74,14 @@ public class jfBatalla extends javax.swing.JFrame {
         
     }
     public void AnalizarSituacion(){
+        miPokemon.nombre=jfEleccion.nombre;
+        Pokemonrival.nombre=jfEleccion.rival;
         if(miPokemon.vida==0){
             jTextArea1.append(miPokemon.nombre + " ,ya no puede continuar,"
             + Pokemonrival.nombre + " gana la batalla.");
             
             jButton1.setEnabled(false);
+            JOptionPane.showMessageDialog(null, "Has perdido la batalla.");
         }
         if(Pokemonrival.vida==0){
             jTextArea1.append(Pokemonrival.nombre + " ,ya no puede continuar,"
@@ -127,11 +128,11 @@ public class jfBatalla extends javax.swing.JFrame {
         jLabel1.setText("¡Hora de pelear!");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Bulbasaur.gif"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 270, -1));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Bulbasaur_1.gif"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 160, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/charmander.gif"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 140, -1, -1));
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -224,7 +225,8 @@ public class jfBatalla extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         String resultado = miPokemon.Atacar(Pokemonrival);
-        miPokemon.nombre ="Bulbasaur";
+        miPokemon.nombre =jfEleccion.nombre;
+        Pokemonrival.nombre=jfEleccion.rival;
         jTextArea1.append(resultado + "\n");
         int cont = 0;    
         int pos = (int)(Math.random()*100);
@@ -259,6 +261,7 @@ public class jfBatalla extends javax.swing.JFrame {
         jTextArea1.append(mostrar + "\n");
         jLabel4.setText(miPokemon.MostrarEstado());
         jButton3.setEnabled(false);
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed

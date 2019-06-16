@@ -77,13 +77,13 @@ public class jfBatalla extends javax.swing.JFrame {
     public void AnalizarSituacion(){
         if(miPokemon.vida==0){
             jTextArea1.append(miPokemon.nombre + " ,ya no puede continuar,"
-            + Pokemonrival.nombre + "gana la batalla.");
+            + Pokemonrival.nombre + " gana la batalla.");
             
             jButton1.setEnabled(false);
         }
         if(Pokemonrival.vida==0){
             jTextArea1.append(Pokemonrival.nombre + " ,ya no puede continuar,"
-            + miPokemon.nombre + "gana la batalla.");
+            + miPokemon.nombre + " gana la batalla.");
             
             jButton1.setEnabled(false);
             JOptionPane.showMessageDialog(null," Ganaste la batalla.");
@@ -134,31 +134,34 @@ public class jfBatalla extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 520, 120));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, 530, 120));
 
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton2.setText("Retirarse");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 450, -1, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 450, -1, -1));
 
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton1.setText("Atacar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, 100, -1));
 
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton3.setText("Usar poción");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 450, -1, -1));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 450, -1, -1));
 
         jLabel4.setForeground(new java.awt.Color(0, 0, 204));
         jLabel4.setText("estadodemipok");
@@ -177,7 +180,8 @@ public class jfBatalla extends javax.swing.JFrame {
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo Batalla.png"))); // NOI18N
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -3, -1, 570));
 
-        jButton5.setText("Usar poción");
+        jButton5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton5.setText("Usar poción 2");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -185,7 +189,8 @@ public class jfBatalla extends javax.swing.JFrame {
         });
         getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 450, -1, -1));
 
-        jButton6.setText("Usar poción");
+        jButton6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton6.setText("Usar poción 2");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -207,26 +212,33 @@ public class jfBatalla extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        double p1 = Math.random();
-        double p2 = Math.random();
-        if(p1>p2){
-            String resultado= miPokemon.Atacar(Pokemonrival);
-            jTextArea1.append(resultado + "\n ");
-            String resultado2= Pokemonrival.Atacar(miPokemon);
-            jTextArea1.append(resultado + " \n");
-        }
-        else{
-            String resultado2= Pokemonrival.Atacar(miPokemon);
-            jTextArea1.append(resultado2 + " \n");
-            String resultado= miPokemon.Atacar(Pokemonrival);
-            jTextArea1.append(resultado + " \n");
+        String resultado = miPokemon.Atacar(Pokemonrival);
+        miPokemon.nombre ="Bulbasaur";
+        jTextArea1.append(resultado + "\n");
+        int cont = 0;    
+        int pos = (int)(Math.random()*100);
+            if(cont < 3){
+                if(pos < 25 && Pokemonrival.vida <= 40){
+                String resultado2 = Pokemonrival.usarPuntosdeVidaHP(Pokemonrival);
+                jTextArea1.append(resultado2 + "\n");
+                cont = cont + 1;
+            }
+            else{
+                 String resultado2 = Pokemonrival.Atacar(miPokemon);
+                 jTextArea1.append(resultado2 + "\n");
+            }
             
         }
+        else{
+            String resultado2 = Pokemonrival.Atacar(miPokemon);
+            jTextArea1.append(resultado2 + "\n");               
+        }
+        
+       
         jLabel4.setText(miPokemon.MostrarEstado());
         jLabel5.setText(Pokemonrival.MostrarEstado());
-        
-        
         AnalizarSituacion();
+
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -240,10 +252,18 @@ public class jfBatalla extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        String mostrar= miPokemon.usarPuntosdeVidaHP(miPokemon);
+        jTextArea1.append(mostrar + "\n");
+        jLabel4.setText(miPokemon.MostrarEstado());
+        jButton5.setEnabled(false);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+        String mostrar= miPokemon.usarPuntosdeVidaHP(miPokemon);
+        jTextArea1.append(mostrar + "\n");
+        jLabel4.setText(miPokemon.MostrarEstado());
+        jButton6.setEnabled(false);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     /**

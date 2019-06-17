@@ -28,31 +28,24 @@ public class Pokimon {
         
        if(critico<=20){
            ataque=(int)(ataque*2);
-           
+           resultado = contrincante.nombre 
+                    + " recibió un ataque crítico de " + ataque;
        }
        if(esquivar<=15){
            ataque=(int)(ataque*0);
+           resultado = contrincante.nombre
+                    + " esquivo el ataque.";
        }
+        else {
+            resultado = contrincante.nombre 
+                    + " recibió un ataque de " + ataque;
+        }
        contrincante.vida = contrincante.vida - ataque;
         
        if(contrincante.vida <= 0){
            contrincante.vida = 0;
         }
-       
-        
-        if (critico <= 20) {
-            resultado = contrincante.nombre 
-                    + " recibió un ataque crítico de " + ataque;
-        if(esquivar <= 15){
-            resultado = contrincante.nombre
-                    + " esquivo el ataque.";
-        }
-        }
-        else {
-            resultado = contrincante.nombre 
-                    + " recibió un ataque de " + ataque;
-        }
-        
+
         return resultado;
     }
         

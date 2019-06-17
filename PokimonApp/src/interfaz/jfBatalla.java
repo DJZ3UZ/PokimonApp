@@ -15,8 +15,8 @@ public class jfBatalla extends javax.swing.JFrame {
     public URL url;
     public URL pokimonp;
     public URL pokimonc;
-    Pokimon miPokemon= new Pokimon(jfEleccion.nombre);
-    Pokimon Pokemonrival=new Pokimon(jfEleccion.rival); 
+    public static Pokimon miPokemon= new Pokimon(jfEleccion.nombre);
+    public static Pokimon Pokemonrival=new Pokimon(jfEleccion.rival); 
 
     public jfBatalla() {
         initComponents();
@@ -252,22 +252,22 @@ public class jfBatalla extends javax.swing.JFrame {
         jTextArea1.append(resultado + "\n");
         int cont = 0;    
         int pos = (int)(Math.random()*100);
-            if(cont < 3){
-                if(pos < 25 && Pokemonrival.vida <= 40){
+            if(cont <= 3){
+                if(pos <= 25 && Pokemonrival.vida <= 40){
                 String resultado2 = Pokemonrival.usarPuntosdeVidaHP(Pokemonrival);
                 jTextArea1.append(resultado2 + "\n");
                 cont = cont + 1;
-            }
-            else{
-                 String resultado2 = Pokemonrival.Atacar(miPokemon);
-                 jTextArea1.append(resultado2 + "\n");
-            }
+                }
+                else{
+                     String resultado2 = Pokemonrival.Atacar(miPokemon);
+                     jTextArea1.append(resultado2 + "\n");
+                }
             
         }
-        else{
-            String resultado2 = Pokemonrival.Atacar(miPokemon);
-            jTextArea1.append(resultado2 + "\n");               
-        }
+            else{
+                String resultado2 = Pokemonrival.Atacar(miPokemon);
+                jTextArea1.append(resultado2 + "\n");               
+            }
         
        
         jLabel4.setText(miPokemon.MostrarEstado());

@@ -1,7 +1,6 @@
 
 package interfaz;
 import Atxy2k.CustomTextField.RestrictedTextField;
-import java.net.URL;
 import javax.swing.ImageIcon;
 
 /**

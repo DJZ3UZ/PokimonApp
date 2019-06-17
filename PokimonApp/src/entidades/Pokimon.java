@@ -28,6 +28,7 @@ public class Pokimon {
         
        if(critico<=20){
            ataque=(int)(ataque*2);
+           
        }
        if(esquivar<=15){
            ataque=(int)(ataque*0);
@@ -37,6 +38,7 @@ public class Pokimon {
        if(contrincante.vida <= 0){
            contrincante.vida = 0;
         }
+       
         
         if (critico <= 20) {
             resultado = contrincante.nombre 
@@ -68,10 +70,10 @@ public class Pokimon {
             HP = HP-15;
         }
         if(p.vida>=65){
-            hp= p.nombre + " ha usado poción, su vida es " + p.vida;
+            hp= p.nombre + " ha usado una poción, su vida es " + p.vida;
         }
         else{
-            hp = p.nombre + " ha usado pocion, su vida aumenta " + HP;
+            hp = p.nombre + " ha usado una pocion, su vida aumenta " + HP;
         }
         return hp;
         

@@ -15,8 +15,8 @@ public class jfBatalla extends javax.swing.JFrame {
     public URL url;
     public URL pokimonp;
     public URL pokimonc;
-    Pokimon miPokemon = new Pokimon(jfEleccion.nombre);
-    Pokimon Pokemonrival= new Pokimon(jfEleccion.rival); 
+    Pokimon miPokemon= new Pokimon(jfEleccion.nombre);
+    Pokimon Pokemonrival=new Pokimon(jfEleccion.rival); 
 
     public jfBatalla() {
         initComponents();

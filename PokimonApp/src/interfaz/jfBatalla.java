@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package interfaz;
 
 import entidades.Pokimon;
@@ -77,18 +73,32 @@ public class jfBatalla extends javax.swing.JFrame {
         miPokemon.nombre=jfEleccion.nombre;
         Pokemonrival.nombre=jfEleccion.rival;
         if(miPokemon.vida==0){
-            jTextArea1.append(miPokemon.nombre + " ,ya no puede continuar,"
+            jTextArea1.append(miPokemon.nombre + " ,ya no puede continuar. "
             + Pokemonrival.nombre + " gana la batalla.");
             
             jButton1.setEnabled(false);
-            JOptionPane.showMessageDialog(null, "Has perdido la batalla.");
+            jButton2.setEnabled(false);
+            jButton3.setEnabled(false);
+            jButton5.setEnabled(false);
+            jButton6.setEnabled(false);
+            JOptionPane.showMessageDialog(null,"Perdiste la batalla entrenador.");
+            
         }
-        if(Pokemonrival.vida==0){
-            jTextArea1.append(Pokemonrival.nombre + " ,ya no puede continuar,"
+        if(Pokemonrival.vida==0 && miPokemon.vida>0){
+            jTextArea1.append(Pokemonrival.nombre + " ,ya no puede continuar. "
             + miPokemon.nombre + " gana la batalla.");
             
             jButton1.setEnabled(false);
+            jButton2.setEnabled(false);
+            jButton3.setEnabled(false);
+            jButton5.setEnabled(false);
+            jButton6.setEnabled(false);
             JOptionPane.showMessageDialog(null," Ganaste la batalla.");
+            
+        if(Pokemonrival.vida==0 && miPokemon.vida==0){
+            jButton1.setEnabled(false);
+            JOptionPane.showMessageDialog(null," Ambos pokemones quedaron derrotados. Es un empate.");
+        }
         }
     }
 
@@ -147,7 +157,7 @@ public class jfBatalla extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 450, -1, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 450, -1, -1));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton1.setText("Atacar");
@@ -159,21 +169,23 @@ public class jfBatalla extends javax.swing.JFrame {
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, 100, -1));
 
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton3.setText("Usar poción");
+        jButton3.setText("Usar poción ");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 450, -1, -1));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 450, -1, -1));
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 204));
         jLabel4.setText("estadodemipok");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 270, -1, -1));
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 204));
         jLabel5.setText("estadodepokrival");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 270, -1, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Red_(Pokémon).png"))); // NOI18N
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
@@ -188,24 +200,26 @@ public class jfBatalla extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 450, -1, -1));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, -1, -1));
 
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton6.setText("Usar poción 2");
+        jButton6.setText("Usar poción 3");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 450, -1, -1));
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 480, -1, -1));
 
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 204));
         jLabel9.setText("jLabel9");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, -1, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, -1, -1));
 
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 0, 204));
         jLabel10.setText("jLabel10");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(442, 270, -1, -1));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 100, -1, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo Batalla.png"))); // NOI18N
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 530));
@@ -215,7 +229,7 @@ public class jfBatalla extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        JOptionPane.showMessageDialog(rootPane, " Has huido de la batalla.");
+        JOptionPane.showMessageDialog(rootPane, " Has decidido retirarte de la batalla.");
         jfBienvenido marco = new jfBienvenido();
         marco.setVisible(true);
         

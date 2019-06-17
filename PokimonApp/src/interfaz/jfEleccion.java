@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package interfaz;
 import Atxy2k.CustomTextField.RestrictedTextField;
 import java.net.URL;
@@ -93,11 +89,12 @@ public class jfEleccion extends javax.swing.JFrame {
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 130, 130, 100));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Red_(Pokémon).png"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 120, 210));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 120, 210));
 
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 0, 0));
         jLabel6.setText("jLabel6");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 390, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 390, 50, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 0, 0));
@@ -117,6 +114,11 @@ public class jfEleccion extends javax.swing.JFrame {
         Bulbasaur.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Bulbasaur.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         Bulbasaur.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Bulbasaur.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BulbasaurActionPerformed(evt);
+            }
+        });
         getContentPane().add(Bulbasaur, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 150, 200));
 
         Pokimon.add(Charmander);
@@ -157,6 +159,12 @@ public class jfEleccion extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel9.setText("Ingresa el nuevo nombre de tu Pokimon:");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, -1, -1));
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 330, 170, 30));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo Eleccion.png"))); // NOI18N
@@ -210,6 +218,14 @@ public class jfEleccion extends javax.swing.JFrame {
     private void SquirtleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SquirtleActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_SquirtleActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void BulbasaurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BulbasaurActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BulbasaurActionPerformed
 
     /**
      * @param args the command line arguments

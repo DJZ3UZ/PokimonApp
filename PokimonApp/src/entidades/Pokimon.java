@@ -9,12 +9,13 @@ public class Pokimon {
 
     public Pokimon(String nombre) {
         this.nombre = nombre;
+        this.nivel=5;
         this.vida = 40 + this.nivel*5;
-        this.nivel =5;
+        
     }
     
     public String MostrarEstado(){
-        String estado =" / " + this.vida + " HP";
+        String estado = " / " + this.vida + " HP";
         return estado;
         
         

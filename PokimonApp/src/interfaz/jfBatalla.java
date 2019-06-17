@@ -127,6 +127,7 @@ public class jfBatalla extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        jButton7 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -221,8 +222,17 @@ public class jfBatalla extends javax.swing.JFrame {
         jLabel10.setText("jLabel10");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 100, -1, -1));
 
+        jButton7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton7.setText("Regresar al Inicio");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 500, -1, -1));
+
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo Batalla.png"))); // NOI18N
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 530));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 530));
 
         setSize(new java.awt.Dimension(779, 566));
         setLocationRelativeTo(null);
@@ -230,10 +240,7 @@ public class jfBatalla extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         JOptionPane.showMessageDialog(rootPane, " Has decidido retirarte de la batalla.");
-        jfBienvenido marco = new jfBienvenido();
-        marco.setVisible(true);
-        
-        dispose();
+        System.exit(0);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -294,6 +301,14 @@ public class jfBatalla extends javax.swing.JFrame {
         jButton6.setEnabled(false);
     }//GEN-LAST:event_jButton6ActionPerformed
 
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        jfBienvenido marco = new jfBienvenido();
+        marco.setVisible(true);
+        
+        dispose();
+    }//GEN-LAST:event_jButton7ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -336,6 +351,7 @@ public class jfBatalla extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     public static javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;

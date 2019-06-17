@@ -131,11 +131,12 @@ public class jfBatalla extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(761, 567));
-        setMinimumSize(new java.awt.Dimension(761, 567));
+        setMaximumSize(new java.awt.Dimension(760, 530));
+        setMinimumSize(new java.awt.Dimension(760, 530));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
         jLabel1.setText("¡Hora de pelear!");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, -1, -1));
 
@@ -229,12 +230,12 @@ public class jfBatalla extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 500, -1, -1));
+        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 490, -1, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo Batalla.png"))); // NOI18N
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 530));
 
-        setSize(new java.awt.Dimension(779, 566));
+        setSize(new java.awt.Dimension(779, 576));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
